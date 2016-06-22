@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестирование хэша ЛСДУ3</title>
+    <script src="lsdu3.js"></script>
+    <script>
+        window.onload = function () {
+            var input = document.getElementById('lsdu3_input');
+            if(input) {
+                input.addEventListener('keyup', function(){
+                    var inputText = this.value;
+                    var output = document.getElementById('lsdu3_output');
+                    output.innerHTML = inputText.lsdu3();
+                })
+            }
+        }
+    </script>
+    <style>
+        body
+        {
+            padding: 20px 2px;
+        }
+
+        .wrapper
+        {
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 500px;
+            margin: auto;
+            padding: 10px;
+
+            background-color: #e8faff;
+            border: #a1d1ff 1px dashed;
+            border-radius: 10px;
+        }
+
+        .wrapper__input
+        {
+            width: 100%;
+            display: block;
+        }
+
+        .wrapper__output
+        {
+            padding: 10px;
+            border: #a1d1ff 1px dashed;
+            border-radius: 10px;
+
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wrapper__output" id="lsdu3_output">&nbsp;</div>
+        <input class="wrapper__input" type="text" id="lsdu3_input" placeholder="Артем Юрьевич Чайка">
+    </div>
+</body>
+</html>
